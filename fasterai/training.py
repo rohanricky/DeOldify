@@ -136,7 +136,7 @@ class GANTrainSchedule():
         return self.data_loader.get_model_data()
 
 class GANTrainer():
-    def __init__(self, netD: nn.Module, netG: GeneratorModule, save_iters:int=10, genloss_fns:[]=[]):
+    def __init__(self, netD: nn.Module, netG: GeneratorModule, save_iters:int=50, genloss_fns:[]=[]):
         self.netD = netD
         self.netG = netG
         self._train_loop_hooks = OrderedDict()
