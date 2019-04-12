@@ -8,8 +8,6 @@ from functools import wraps
 import json
 import threading
 import logging
-from fastai.torch_imports import *
-from fastai.core import *
 
 # creates a Flask application, named app
 app = Flask(__name__)
@@ -24,6 +22,8 @@ app.config['OUTPUT_FOLDER'] = OUTPUT_FOLDER
 #app.config['COMMAND'] = ""
 
 sys.path.append(os.path.abspath("../code/"))
+from fastai.torch_imports import *
+from fastai.core import *
 from fasterai.filters import Colorizer34
 from fasterai.visualize import ModelImageVisualizer
 
